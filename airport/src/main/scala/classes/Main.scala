@@ -32,7 +32,6 @@ object Main extends App {
     }
   }
 
-// Affichage des aéroports
   def displayAirports(airports: List[Airport]): Unit = {
     println("=== Liste des Aéroports ===")
     airports.take(10).foreach { airport =>
