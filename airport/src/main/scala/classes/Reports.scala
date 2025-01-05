@@ -6,23 +6,24 @@ import scala.io.StdIn.readLine
 object Reports {
     def displayMenu(countries: List[Country], airports: List[Airport], runways: List[Runway]): Unit = {
         println("Choose a report:")
-        println("1. Top 10 countries with most airports")
-        println("2. Top 10 countries with least airports")
+        println("1. Top 10 with highest number of airports")
+        println("2. Top 10 with lowest number of airports")
         println("3. Types of runways by country")
         println("4. Top 10 most common runway latitudes")
         println("5. Return to main menu")
 
         val choice = scala.io.StdIn.readLine().trim
         choice match {
-        case "1" => top10CountriesWithMostAirports(countries, airports)
-        case "2" => top10CountriesWithLeastAirports(countries, airports)
+        case "1" => top10CountriesWithHighestNumberOfAirports(countries, airports)
+        case "2" => top10CountriesWithLowestNumberOfAirports(countries, airports)
         case "3" => runwayTypesByCountry(countries, airports, runways)
         case "4" => top10RunwayLatitudes(runways)
         case "5" => println("Returning to main menu...")
         case _   => println("Invalid option.")
         }
     }
-    def top10CountriesWithMostAirports(countries: List[Country], airports: List[Airport]): Unit = {
+
+    def top10CountriesWithHighestNumberOfAirports(countries: List[Country], airports: List[Airport]): Unit = {
         val airportCounts = airports.groupBy(_.isoCountry).mapValues(_.size)
         val top10 = airportCounts.toList.sortBy(-_._2).take(10)
 
@@ -33,7 +34,7 @@ object Reports {
         }
     }
 
-    def top10CountriesWithLeastAirports(countries: List[Country], airports: List[Airport]): Unit = {
+    def top10CountriesWithLowestNumberOfAirports(countries: List[Country], airports: List[Airport]): Unit = {
         val airportCounts = airports.groupBy(_.isoCountry).mapValues(_.size)
         val bottom10 = airportCounts.toList.sortBy(_._2).take(10)
 
@@ -52,7 +53,7 @@ object Reports {
 
         println(s"Runway types in ${country.name}:")
         if (runwayTypes.isEmpty) {
-            println("  No runways found.")
+            println("No runways found.")
         } else {
             runwayTypes.foreach { case (surface, count) =>
             println(s"- $surface: $count")
@@ -62,15 +63,12 @@ object Reports {
     }
     
     def top10RunwayLatitudes(runways: List[Runway]): Unit = {
-        // Regroupe les pistes par `le_ident` (latitude) et compte les occurrences
         val latitudeCounts = runways
-            .groupBy(_.leIdent) // Regroupe par la colonne le_ident
-            .mapValues(_.size)  // Compte le nombre d'occurrences par latitude
+            .groupBy(_.leIdent)
+            .mapValues(_.size) 
 
-        // Trie par ordre décroissant et prend les 10 premières
         val top10Latitudes = latitudeCounts.toList.sortBy(-_._2).take(10)
 
-        // Affiche les résultats
         println("Top 10 most common runway latitudes (le_ident):")
         top10Latitudes.foreach { case (latitude, count) =>
             println(s"Latitude $latitude: $count occurrences")

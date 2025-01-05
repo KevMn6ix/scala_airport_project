@@ -43,12 +43,12 @@ object Main extends App {
 
   def displayMenu(): Unit = {
     println("Choisissz une option")
-    println("1. Requete chercher les differentes informations par pays")
-    println("0. Quitter le programme")
+    println("1 - Requete chercher les differentes informations par pays")
+    println("2 - Rapport (statistique, classement)")
+    println("3 - Quitter le programme")
   }
 
   var continue = true
-
   while (continue) {
     displayMenu()
     val choice = scala.io.StdIn.readLine().trim
@@ -57,10 +57,10 @@ object Main extends App {
       case "1" =>
         println("Entrez un nom de pays ou un code (ex : france ou FR)")
         val input = scala.io.StdIn.readLine().trim
-        Queries.query(input, countries, airports, runways) // Exécute une requête
+        Queries.query(input, countries, airports, runways)
       case "2" =>
-        Reports.displayMenu(countries, airports, runways) // Affiche les rapports
-      case "0" =>
+        Reports.displayMenu(countries, airports, runways)
+      case "3" =>
         println("Merci pour votre participation au revoir")
         continue = false
       case _ =>

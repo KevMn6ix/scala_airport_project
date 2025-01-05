@@ -1,0 +1,85 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:6:14: object swing is not a member of package scala[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.swing._[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:7:14: object swing is not a member of package scala[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.swing.event._[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:10:24: not found: type SimpleSwingApplication[0m
+[0m[[0m[31merror[0m] [0m[0mobject MainGUI extends SimpleSwingApplication {[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:19:12: not found: type MainFrame[0m
+[0m[[0m[31merror[0m] [0m[0m  def top: MainFrame = new MainFrame {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:19:28: not found: type MainFrame[0m
+[0m[[0m[31merror[0m] [0m[0m  def top: MainFrame = new MainFrame {[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:20:5: not found: value title[0m
+[0m[[0m[31merror[0m] [0m[0m    title = "Airport & Runway Information"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:21:5: not found: value preferredSize[0m
+[0m[[0m[31merror[0m] [0m[0m    preferredSize = new Dimension(800, 600)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:24:26: not found: type Label[0m
+[0m[[0m[31merror[0m] [0m[0m    val titleLabel = new Label("Bienvenue dans le gestionnaire des aéroports")[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:27:27: not found: type Button[0m
+[0m[[0m[31merror[0m] [0m[0m    val queryButton = new Button("Requête (Chercher infos par pays)")[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:28:28: not found: type Button[0m
+[0m[[0m[31merror[0m] [0m[0m    val reportButton = new Button("Rapports (Statistiques)")[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:29:26: not found: type Button[0m
+[0m[[0m[31merror[0m] [0m[0m    val exitButton = new Button("Quitter")[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:31:26: not found: type TextArea[0m
+[0m[[0m[31merror[0m] [0m[0m    val resultArea = new TextArea {[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:32:7: not found: value editable[0m
+[0m[[0m[31merror[0m] [0m[0m      editable = false[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:33:7: not found: value lineWrap[0m
+[0m[[0m[31merror[0m] [0m[0m      lineWrap = true[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:34:7: not found: value wordWrap[0m
+[0m[[0m[31merror[0m] [0m[0m      wordWrap = true[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:37:26: not found: type TextField[0m
+[0m[[0m[31merror[0m] [0m[0m    val inputField = new TextField {[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:38:7: not found: value columns[0m
+[0m[[0m[31merror[0m] [0m[0m      columns = 20[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:41:26: not found: type BoxPanel[0m
+[0m[[0m[31merror[0m] [0m[0m    val queryPanel = new BoxPanel(Orientation.Horizontal) {[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:42:7: not found: value contents[0m
+[0m[[0m[31merror[0m] [0m[0m      contents += new Label("Nom du pays ou code : ")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:42:23: not found: type Label[0m
+[0m[[0m[31merror[0m] [0m[0m      contents += new Label("Nom du pays ou code : ")[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:43:7: not found: value contents[0m
+[0m[[0m[31merror[0m] [0m[0m      contents += inputField[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:44:7: not found: value contents[0m
+[0m[[0m[31merror[0m] [0m[0m      contents += queryButton[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:48:5: not found: value contents[0m
+[0m[[0m[31merror[0m] [0m[0m    contents = new BorderPanel {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:61:5: not found: value listenTo[0m
+[0m[[0m[31merror[0m] [0m[0m    listenTo(queryButton, reportButton, exitButton)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:63:5: not found: value reactions[0m
+[0m[[0m[31merror[0m] [0m[0m    reactions += {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:64:12: not found: value ButtonClicked[0m
+[0m[[0m[31merror[0m] [0m[0m      case ButtonClicked(`queryButton`) =>[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:74:12: not found: value ButtonClicked[0m
+[0m[[0m[31merror[0m] [0m[0m      case ButtonClicked(`reportButton`) =>[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:77:12: not found: value ButtonClicked[0m
+[0m[[0m[31merror[0m] [0m[0m      case ButtonClicked(`exitButton`) =>[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m28 errors found[0m
