@@ -58,6 +58,8 @@ object Main extends App {
         println("Entrez un nom de pays ou un code (ex : france ou FR)")
         val input = scala.io.StdIn.readLine().trim
         Queries.query(input, countries, airports, runways) // Exécute une requête
+      case "2" =>
+        Reports.displayMenu(countries, airports, runways) // Affiche les rapports
       case "0" =>
         println("Merci pour votre participation au revoir")
         continue = false
