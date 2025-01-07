@@ -1,12 +1,11 @@
 import classes._
 import java.io.File
-
 import scala.io.StdIn.readLine
 
 object Main extends App {
-  val countriesFilePath = "../../../../countries.csv"
-  val airportsFilePath = "../../../../airports.csv"
-  val runwaysFilePath = "../../../../runways.csv"
+  val countriesFilePath = "./countries.csv"
+  val airportsFilePath = "./airports.csv"
+  val runwaysFilePath = "./runways.csv"
 
   val countries = CsvParser.parseCountries(countriesFilePath)
   val airports = CsvParser.parseAirports(airportsFilePath)

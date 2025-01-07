@@ -1,40 +1,48 @@
 import classes._ 
 import java.io.File
-
 import scala.io.StdIn.readLine
-
 object Queries {
-  def queryGUI(input: String, countries: List[Country], airports: List[Airport], runways: List[Runway]): String = {
-    val sb = new StringBuilder
+  def query(input: String, countries: List[Country], airports: List[Airport], runways: List[Runway]): Unit = {
+    println(s"Recherche pour : '$input'")
     val exactMatches = countries.filter { country =>
-      country.name.equalsIgnoreCase(input) || country.code.equalsIgnoreCase(input)
+      country.name.equalsIgnoreCase(input.trim) || country.code.equalsIgnoreCase(input.trim)
     }
-
-    if (exactMatches.isEmpty) {
-      sb.append(s"Aucun pays trouvé pour : $input\n")
+    val prefixMatches = if (exactMatches.nonEmpty) {
+      exactMatches
     } else {
-      exactMatches.foreach { country =>
-        sb.append(s"Pays : ${country.name} (${country.code})\n")
-        val countryAirports = airports.filter(_.isoCountry == country.code)
+      countries.filter { country =>
+        country.name.toLowerCase.startsWith(input.toLowerCase.trim) || 
+        country.code.toLowerCase.startsWith(input.toLowerCase.trim)
+      }
+    }
+    if (prefixMatches.isEmpty) {
+      println(s"Aucun pays trouvé correspondant à '$input'.")
+    } else {
+      println("Pays correspondants :")
+      prefixMatches.foreach(country => println(s"- ${country.name} (${country.code})"))
+      if (prefixMatches.size > 1) {
+        println("Plusieurs pays correspondent à votre recherche.")
+      }
+      prefixMatches.foreach { country =>
+        println(s"Aéroports situés en ${country.name} :")
+        val countryAirports = airports.filter(airport => {
+            airport.isoCountry == country.code
+        })
         if (countryAirports.isEmpty) {
-          sb.append(s"  Aucun aéroport trouvé.\n")
+          println(s"Aucun aéroport trouvé dans ${country.name}.")
         } else {
-          sb.append("  Aéroports :\n")
           countryAirports.foreach { airport =>
-            sb.append(s"    - ${airport.name} (${airport.ident})\n")
-            val airportRunways = runways.filter(_.airportRef == airport.id)
+            println(s"- ${airport.name}")
+            val airportRunways = runways.filter(runway => runway.airportRef == airport.id)
             if (airportRunways.isEmpty) {
-              sb.append(s"      Aucun piste trouvée.\n")
+              println("Aucune piste trouvée.")
             } else {
-              sb.append("      Pistes :\n")
-              airportRunways.foreach { runway =>
-                sb.append(s"        - Surface : ${runway.surface}\n")
-              }
+              println("Pistes :")
+              airportRunways.foreach(arw => println(s"    - ${arw.surface}"))
             }
           }
         }
       }
     }
-    sb.toString()
   }
 }
