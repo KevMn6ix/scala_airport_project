@@ -10,7 +10,7 @@ object Main extends App {
   val countries = CsvParser.parseCountries(countriesFilePath)
   val airports = CsvParser.parseAirports(airportsFilePath)
   val runways = CsvParser.parseRunways(runwaysFilePath)
-  
+
   println(s"Nombre de pays : ${countries.size}")
   println(s"Nombre d'aéroports : ${airports.size}")
   println(s"Nombre de pistes : ${runways.size}")
@@ -18,7 +18,7 @@ object Main extends App {
   def displayCountries(countries: List[Country]): Unit = {
     println("=== Liste des Pays ===")
     countries.take(10).foreach { country =>
-        println(f"- ID: ${country.id}%-6s Code: ${country.code}%-3s Nom: ${country.name}%-30s Continent: ${country.continent}%-3s Wikipedia: ${country.wikipediaLink}%-40s Keywords: ${country.keywords}")
+      println(f"- ID: ${country.id}%-6s Code: ${country.code}%-3s Nom: ${country.name}%-30s Continent: ${country.continent}%-3s Wikipedia: ${country.wikipediaLink}%-40s Keywords: ${country.keywords}")
     }
   }
 
@@ -41,29 +41,32 @@ object Main extends App {
   displayRunways(runways)
 
   def displayMenu(): Unit = {
-    println("Choisissz une option")
-    println("1 - Requete chercher les differentes informations par pays")
+    println("Choisissez une option")
+    println("1 - Requete : chercher les différentes informations par pays")
     println("2 - Rapport (statistique, classement)")
     println("3 - Quitter le programme")
   }
 
-  var continue = true
-  while (continue) {
+  def menuLoop(): Unit = {
     displayMenu()
-    val choice = scala.io.StdIn.readLine().trim
+    val choice = readLine().trim
 
     choice match {
       case "1" =>
         println("Entrez un nom de pays ou un code (ex : france ou FR)")
-        val input = scala.io.StdIn.readLine().trim
+        val input = readLine().trim
         Queries.query(input, countries, airports, runways)
+        menuLoop()
       case "2" =>
         Reports.displayMenu(countries, airports, runways)
+        menuLoop()
       case "3" =>
-        println("Merci pour votre participation au revoir")
-        continue = false
+        println("Merci pour votre participation, au revoir")
       case _ =>
-        println("Choix invalide, veuilez reesayer !")
+        println("Choix invalide, veuillez réessayer !")
+        menuLoop() 
     }
   }
+
+  menuLoop()
 }

@@ -1,5 +1,63 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:59:17: value query is not a member of object Queries[0m
-[0m[[0m[31merror[0m] [0m[0mdid you mean queryGUI?[0m
-[0m[[0m[31merror[0m] [0m[0m        Queries.query(input, countries, airports, runways)[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:51:5: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method displayMenu in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method displayMenu in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0m    displayMenu()[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:59:9: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0m        menuLoop() // Appel récursif pour retourner au menu après l'exécution[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:62:9: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0m        menuLoop() // Appel récursif pour retourner au menu après l'exécution[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:67:9: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0m        menuLoop() // Appel récursif pour réessayer après un choix invalide[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:79:3: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method displayMenu in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method displayMenu in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0m  displayMenu()[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:87:7: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0m      menuLoop() // Appel récursif pour retourner au menu après l'exécution[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:90:7: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0m      menuLoop() // Appel récursif pour retourner au menu après l'exécution[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:95:7: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0m      menuLoop() // Appel récursif pour réessayer après un choix invalide[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:100:1: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mand  method menuLoop in object Main of type (): Unit[0m
+[0m[[0m[31merror[0m] [0m[0mmatch argument types ()[0m
+[0m[[0m[31merror[0m] [0m[0mmenuLoop()[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:78:5: method menuLoop is defined twice;[0m
+[0m[[0m[31merror[0m] [0m[0m  the conflicting method menuLoop was defined at line 50:7[0m
+[0m[[0m[31merror[0m] [0m[0mdef menuLoop(): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kevmu\Desktop\Efrei\Efrei_M1\Scala\scala_airport_project\airport\src\main\scala\classes\Main.scala:71:5: method displayMenu is defined twice;[0m
+[0m[[0m[31merror[0m] [0m[0m  the conflicting method displayMenu was defined at line 43:7[0m
+[0m[[0m[31merror[0m] [0m[0mdef displayMenu(): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m11 errors found[0m
